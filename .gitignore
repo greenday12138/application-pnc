@@ -93,3 +93,5 @@ third_party/
 CPPLINT.cfg
 modules/common_msgs
 modules/BUILD
+
+*.tar.gz

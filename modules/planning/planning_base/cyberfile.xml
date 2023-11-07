@@ -1,0 +1,48 @@
+<package format="2">
+  <name>planning</name>
+  <version>local</version>
+  <description>
+    Compared with previous versions, Apollo 7.0 adds a  new dead end scenario, adds the "three-point turn",  increases vehicle driving in and out ability, and expands the operation boundary of the urban road network. The "three-point turn" function is based on the open space planner framework and includes the following parts: scene conversion of dead ends, construction of open space ROI, and "three-point turn" trajectory planning.
+  </description>
+  
+  <maintainer email="apollo-support@baidu.com">Apollo</maintainer>
+  <license>Apache License 2.0</license>
+  <url type="website">https://www.apollo.auto/</url>
+  <url type="repository">https://github.com/ApolloAuto/apollo</url>
+  <url type="bugtracker">https://github.com/ApolloAuto/apollo/issues</url>
+
+  <type>module</type>
+  <src_path url="https://github.com/ApolloAuto/apollo">//modules/planning/planning_base</src_path>
+
+  <depend lib_names="gflags" repo_name="com_github_gflags_gflags">3rd-gflags</depend>
+  <depend lib_names="absl" repo_name="com_google_absl">3rd-absl</depend>
+  <depend repo_name="osqp">3rd-osqp</depend>
+  <depend lib_names="glog" repo_name="com_github_google_glog">3rd-glog</depend>
+  <depend repo_name="proj">3rd-proj</depend>
+  <depend repo_name="tinyxml2" so_names="tinyxml2">libtinyxml2-dev</depend>
+  <depend repo_name="boost">3rd-boost</depend>
+  <depend lib_names="core,highgui,imgproc,imgcodecs" repo_name="opencv">3rd-opencv</depend>
+  <depend repo_name="ipopt">3rd-ipopt</depend>
+  <depend repo_name="eigen">3rd-eigen3</depend>
+  <depend repo_name="adolc" so_names="adolc">libadolc-dev</depend>
+  <depend lib_names="ad_rss" repo_name="ad_rss_lib">3rd-ad-rss-lib</depend>
+  <depend repo_name="cyber" type="binary">cyber</depend>
+  <depend lib_names="common" repo_name="common" type="binary">common</depend>
+  <depend lib_names="map" repo_name="map" type="binary">map</depend>
+  <depend lib_names="common-msgs" repo_name="common-msgs" type="binary">common-msgs</depend>
+  <depend repo_name="prediction" type="binary">prediction</depend>
+  <depend>bazel-extend-tools</depend>
+  <depend>3rd-mkl</depend>
+  <depend lib_names="libtorch_cpu" repo_name="libtorch_cpu">3rd-libtorch-cpu</depend>
+  <depend lib_names="protobuf" repo_name="com_google_protobuf">3rd-protobuf</depend>
+
+  <depend expose="False">3rd-rules-python</depend>
+  <depend expose="False">3rd-grpc</depend>
+  <depend expose="False">3rd-bazel-skylib</depend>
+  <depend expose="False">3rd-rules-proto</depend>
+  <depend expose="False">3rd-py</depend>
+  <depend expose="False">3rd-gpus</depend>
+
+  <depend lib_names="gtest,gtest_main" repo_name="com_google_googletest">3rd-gtest</depend>
+  
+</package>
